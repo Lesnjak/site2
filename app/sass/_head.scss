@@ -1236,3 +1236,31 @@ visibility: hidden;
     height: 25px;
   }
 }
+footer{
+  padding: 32px 20px;
+  background-color: #4a76a8;
+  .foo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .left {
+    color: #ffffff;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .right{
+    a{
+      color: #ffffff;
+      font-family: Gilroy;
+      font-size: 18px;
+      font-weight: 400;
+      transition: 0.3s;
+      &:hover{
+        text-shadow: 0 0 8px #000 ;
+      }
+    }
+  }
+
+}
