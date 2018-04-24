@@ -118,8 +118,9 @@ $('document').ready(function () {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
-                    arrows: false
+                    slidesToShow: 2,
+                    arrows: false,
+                    vertical: true
                 }
             }
 
@@ -265,13 +266,36 @@ $('document').ready(function () {
         $('.popup-images').removeClass('pop-n');
 
     });
-    $('[data-photo="sahara"]').click(function () {
-        $(".sahara").addClass('pop-n');
-    });
     $('[data-photo="khata"]').click(function () {
         $(".sahara").addClass('pop-n');
     });
-
+    $('[data-photo="sahara"]').click(function () {
+        $(".khata").addClass('pop-n');
+    });
+///////////////////
+    // text rotator
+    textRotator = function(element) {
+        var words = $(element),
+            total = words.length - 1,
+            position = 0,
+            current = null,
+            timer = null;
+        $(element).first().addClass('active');
+        var autoSlide = function() {
+            words.removeClass('active');
+            if (position === total) {
+                position = 0;
+            } else {
+                position = position + 1;
+            }
+            //console.log(position);
+            words.eq(position).addClass('active');
+        };
+        timer = setInterval(autoSlide, 4000);
+    };
+    $(document).ready(function() {
+        textRotator('.change-text span');
+    });
 // // ZOOM
 //     $('.ex1').zoom();
 //
