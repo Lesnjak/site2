@@ -1314,6 +1314,7 @@ $base: 16;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 h1.intro {
@@ -1353,24 +1354,24 @@ h1.intro {
     clip: rect(0, 1000px,1000px, 0px);
   }
 }
-@media (max-width: 1200px) {
-  .change-block{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .change-text span{
-    display: flex;
-    justify-content: center;
-  }
-}@media (max-width: 480px) {
+@media (max-width: 480px) {
   h1.intro{
     font-size: 30px;
   }
   .change-text span{
     font-size: 30px;
-  }
-  .blue{
-    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
   }
 }
+//@media (max-width: 1200px) {
+//  .change-block{
+//    display: flex;
+//    justify-content: center;
+//    flex-wrap: wrap;
+//  }
+//  .change-text span{
+//    display: flex;
+//    justify-content: center;
+//  }
+//}
